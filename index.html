@@ -260,7 +260,6 @@
             text-shadow: 1px 1px 0 #fff;
             display: block;
             margin-bottom: 0.5rem;
-            /* text-transform: uppercase; REMOVED FOR NATURAL CAPITALIZATION */
         }
 
         #feedback-corner .contact-info {
@@ -448,11 +447,6 @@
             width: 4px;
             background: linear-gradient(to bottom, var(--color-secondary), var(--color-primary));
             z-index: 5;
-        }
-        
-        .step-item:last-child::after {
-            /* This is a visual element, so it needs to be hidden only if we apply it to .stepper */
-            /* In this case, .stepper::after covers the whole range, so no change is needed here. */
         }
         
         .step-content {
@@ -1118,8 +1112,8 @@
 
     <div id="feedback-corner">
         <div class="container">
-            <span class="highlight-text">Sphere 2.0 Beta is Live!</span>
-            <span>We're gathering feedback on our new secure communication relay. Contact your account manager for access.</span>
+            <span class="highlight-text">Thanks for visiting our stall at Sphere 2.0!</span>
+            <span>We're gathering feedback on our new secure communication relay. Contact Founder Mr. Hrehaan at <strong style="color: var(--color-primary);">98689 96727</strong> for access.</span>
         </div>
     </div>
     
@@ -1151,19 +1145,19 @@
         <div class="container">
             <div class="grid grid-4 stats-grid">
                 <div class="stat-item">
-                    <h2 data-target="700">0</h2>
+                    <h2 data-target="0">0</h2>
                     <p>Institutions Worldwide</p>
                 </div>
                 <div class="stat-item">
-                    <h2 data-target="150000">0</h2>
+                    <h2 data-target="0">0</h2>
                     <p>Student Profiles</p>
                 </div>
                 <div class="stat-item">
-                    <h2 data-target="38000">0</h2>
+                    <h2 data-target="0">0</h2>
                     <p>Completed Exchanges</p>
                 </div>
                 <div class="stat-item">
-                    <h2 data-target="47">0</h2>
+                    <h2 data-target="0">0</h2>
                     <p>Countries/Regions</p>
                 </div>
             </div>
@@ -1366,27 +1360,27 @@
                     <div class="testimonial-author-info">
                         <div>
                             <div class="author-name">Hrehaan</div> 
-                            <div class="author-title">Founder of the reciprocity</div>
+                            <div class="author-title">Founder of Reciprocity</div>
                         </div>
                     </div>
                 </div>
 
                 <div class="testimonial-card hover-lift-shadow animate-fade-up" style="transition-delay: 0.1s;">
-                    <p class="testimonial-quote">"The Regional Match Lock feature is essential. We can confidently connect our students with local, verified schools, enriching their curriculum and building a stronger community network."</p>
+                    <p class="testimonial-quote">"The platform is intuitive, and the support from the Reciprocity team is top-notch. It has significantly streamlined our community learning network."</p>
                     <div class="testimonial-author-info">
                         <div>
-                            <div class="author-name">Nikhil</div> 
-                            <div class="author-title">Co-founder of the reciprocity</div>
+                            <div class="author-name">Verified Admin</div> 
+                            <div class="author-title">Education Partner</div>
                         </div>
                     </div>
                 </div>
 
                 <div class="testimonial-card hover-lift-shadow animate-fade-up" style="transition-delay: 0.2s;">
-                    <p class="testimonial-quote">"We saw a 40% increase in student engagement in cross-disciplinary skills within the first semester. The platform is intuitive, and the support from the Reciprocity team is top-notch."</p>
+                    <p class="testimonial-quote">"We saw a dramatic increase in student engagement in cross-disciplinary skills within the first semester. Highly recommend for any forward-thinking institution."</p>
                     <div class="testimonial-author-info">
                         <div>
-                            <div class="author-name">Nikhil</div> 
-                            <div class="author-title">Co-founder of the reciprocity</div>
+                            <div class="author-name">Verified Admin</div> 
+                            <div class="author-title">Education Partner</div>
                         </div>
                     </div>
                 </div>
@@ -1466,8 +1460,8 @@
                     </div>
                     <div class="faq-answer">
                         <div class="faq-answer-inner">
-                            <p>Yes, but this feature is now included in **all tiers** (removed cross icon) and is specifically designed for institutions subscribed to the **Global Tier** where the International Compliance Toolkit (ICT) is included.</p>
-                            <p>The Global Tier includes the International Compliance Toolkit (ICT) to handle multi-jurisdictional data compliance (GDPR, COPPA, etc.) and allows for unlimited exchange radius. Institutional Plan users are limited to regional exchanges (100km radius).</p>
+                            <p>Yes, but this feature is specifically designed for institutions subscribed to the **Global Tier** where the International Compliance Toolkit (ICT) is included.</p>
+                            <p>The Global Tier handles multi-jurisdictional data compliance (GDPR, COPPA, etc.) and allows for unlimited exchange radius. Institutional Plan users are limited to regional exchanges (100km radius).</p>
                         </div>
                     </div>
                 </div>
@@ -1495,7 +1489,7 @@
                 <div class="footer-column">
                     <h4>Contact Info</h4>
                     <p>Email: <a href="mailto:support@reciprocity.com">support@reciprocity.com</a></p>
-                    <p>Address: 123 Skill Exchange Lane, Cyberville, US</p>
+                    <p>Founder: <strong style="color: #fff;">Hrehaan (98689 96727)</strong></p>
                 </div>
                 <div class="footer-column">
                     <h4>Quick Links</h4>
@@ -1561,10 +1555,7 @@
         </div>
     </div>
 
-
-    <div id="success-popup">
-        </div>
-
+    <div id="success-popup"></div>
 
     <script>
         // --- 1. GLOBAL ELEMENT REFERENCES ---
@@ -1575,7 +1566,7 @@
 
         // --- 2. STATS COUNTER ANIMATION LOGIC (Intersection Observer) ---
         const statsSection = document.getElementById('stats');
-        let hasAnimated = false; // Flag to prevent re-animation on scroll
+        let hasAnimated = false; 
 
         const animateStats = () => {
              new IntersectionObserver((entries, observer) => {
@@ -1584,7 +1575,7 @@
                         document.querySelectorAll('.stat-item h2').forEach(counter => {
                             const target = parseInt(counter.getAttribute('data-target'));
                             let current = 0;
-                            const duration = 2000; // 2 seconds
+                            const duration = 2000; 
                             let startTimestamp = null;
 
                             const step = (timestamp) => {
@@ -1592,26 +1583,23 @@
                                 const progress = Math.min((timestamp - startTimestamp) / duration, 1);
                                 const displayValue = Math.floor(progress * target);
                                 
-                                // Use locale string for thousands separators
                                 counter.innerText = displayValue.toLocaleString('en-IN'); 
 
                                 if (progress < 1) {
                                     window.requestAnimationFrame(step);
                                 } else {
-                                    // Set final value to ensure accuracy
                                     counter.innerText = target.toLocaleString('en-IN');
                                 }
                             };
                             window.requestAnimationFrame(step);
                         });
-                        hasAnimated = true; // Set flag to prevent re-animation
-                        observer.unobserve(statsSection); // Stop observing after animation
+                        hasAnimated = true; 
+                        observer.unobserve(statsSection); 
                     }
                 });
             }, { threshold: 0.5 }).observe(statsSection);
         }
 
-        // --- 2.5. GENERAL FADE-UP ANIMATION LOGIC ---
         const setupFadeUpAnimation = () => {
             const fadeElements = document.querySelectorAll('.animate-fade-up');
             const observer = new IntersectionObserver((entries, observer) => {
@@ -1621,27 +1609,19 @@
                         observer.unobserve(entry.target);
                     }
                 });
-            }, { threshold: 0.1 }); // Trigger when 10% is visible
+            }, { threshold: 0.1 }); 
 
             fadeElements.forEach(el => {
                 observer.observe(el);
             });
         };
 
-        // Initialize all animations when the content is ready
         document.addEventListener('DOMContentLoaded', () => {
             animateStats();
             setupFaqAccordion();
             setupFadeUpAnimation();
         });
 
-
-        // --- 2. SAFETY/SKILL SUBMISSION MODAL LOGIC ---
-
-        /**
-         * @function openSafetyModal
-         * @description Shows the safety consent modal if form fields are filled.
-         */
         function openSafetyModal() {
             const schoolName = document.getElementById('school-name').value;
             const canTeach = document.getElementById('canTeach').value;
@@ -1654,19 +1634,10 @@
             }
         }
 
-        /**
-         * @function closeSafetyModal
-         * @description Closes the safety consent modal.
-         */
         function closeSafetyModal() {
             safetyModal.classList.remove('active');
         }
 
-        /**
-         * @function showSuccessMessage
-         * @description Displays a global success message popup.
-         * @param {string} message - The message to display.
-         */
         function showSuccessMessage(message) {
             const popup = document.getElementById('success-popup');
             let messageElement = document.querySelector('#success-popup .popup-message');
@@ -1676,59 +1647,32 @@
                 popup.appendChild(messageElement);
             }
             messageElement.textContent = message;
-
             popup.classList.add('show');
-
-            // Hide the popup after 4 seconds
             setTimeout(() => {
                 popup.classList.remove('show');
             }, 4000);
         }
 
-        /**
-         * @function confirmSkillSubmission
-         * @description Finalizes submission after safety consent. Simulates an API call.
-         */
         function confirmSkillSubmission() {
-            // 1. Close the safety modal
             closeSafetyModal();
-
-            // 2. Simulate API Submission to Backend (Placeholder for actual network request)
-            console.log("Submitting skill profile to Reciprocity Match API...");
-            // Get form data for simulation logging
-            const school = document.getElementById('school-name').value;
-            const canTeach = document.getElementById('canTeach').value.substring(0, 30) + '...';
-            const wantToLearn = document.getElementById('wantToLearn').value.substring(0, 30) + '...';
-            console.log(`School: ${school}, Can Teach: ${canTeach}, Want to Learn: ${wantToLearn}`);
-
-            // 3. Show success message
             showSuccessMessage('Submission successful! Awaiting Moderator approval.');
-
-            // 4. Reset the form
             skillForm.reset();
         }
 
-
-        // --- 3. FAQ ACCORDION LOGIC ---
         const setupFaqAccordion = () => {
             const accordionQuestions = document.querySelectorAll('.faq-question');
             accordionQuestions.forEach(question => {
                 question.addEventListener('click', () => {
                     const isActive = question.classList.contains('active');
                     const answer = question.nextElementSibling;
-                    
-                    // Close all other open answers
                     document.querySelectorAll('.faq-question.active').forEach(activeQuestion => {
                         if (activeQuestion !== question) {
                             activeQuestion.classList.remove('active');
                             activeQuestion.nextElementSibling.style.maxHeight = 0;
                         }
                     });
-
-                    // Toggle current answer
                     if (!isActive) {
                         question.classList.add('active');
-                        // Set maxHeight to the scrollHeight to enable the transition
                         answer.style.maxHeight = answer.scrollHeight + "px";
                     } else {
                         question.classList.remove('active');
@@ -1738,13 +1682,6 @@
             });
         };
         
-        // --- 4. PLAN REGISTRATION MODAL LOGIC ---
-
-        /**
-         * @function openRegistrationModal
-         * @description Opens the registration modal and pre-selects a plan if provided.
-         * @param {string} [planName] - The name of the plan to pre-select.
-         */
         function openRegistrationModal(planName) {
             if (planName) {
                 registrationPlanSelect.value = planName;
@@ -1754,15 +1691,10 @@
             registrationModal.classList.add('active');
         }
 
-        /**
-         * @function closeRegistrationModal
-         * @description Closes the registration modal.
-         */
         function closeRegistrationModal() {
             registrationModal.classList.remove('active');
         }
 
-        // Close the modal if the user clicks anywhere outside of the modal content
         window.addEventListener('click', (event) => {
             if (event.target === registrationModal || event.target === safetyModal) {
                 if (event.target === registrationModal) closeRegistrationModal();
@@ -1770,16 +1702,12 @@
             }
         });
 
-        // Optional: Prevent form submission and show a success message (simulated)
         document.getElementById('plan-registration-form').addEventListener('submit', function(e) {
             e.preventDefault();
-            console.log("Plan Registration Form Submitted!");
             showSuccessMessage('Thank you for your registration! A sales representative will be in touch shortly.');
             closeRegistrationModal();
             this.reset();
         });
-        // --- END NEW PLAN REGISTRATION MODAL LOGIC ---
-
     </script>
 </body>
 </html>
